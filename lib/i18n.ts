@@ -2,7 +2,7 @@ export type Lang = 'en' | 'ar';
 
 export type Dict = {
   dir: 'ltr' | 'rtl';
-  nav: { about: string; lineup: string; visit: string; tickets: string };
+  nav: { about: string; lineup: string; visit: string; tickets: string; buyTickets: string };
   langToggle: { label: string; switchTo: string };
   hero: {
     kicker: string;
@@ -70,7 +70,7 @@ export type Dict = {
 export const dict: Record<Lang, Dict> = {
   en: {
     dir: 'ltr',
-    nav: { about: 'About', lineup: 'Events', visit: 'Visit', tickets: 'Tickets' },
+    nav: { about: 'About', lineup: 'Events', visit: 'Visit', tickets: 'Tickets', buyTickets: 'Buy tickets' },
     langToggle: { label: 'العربية', switchTo: 'Switch to Arabic' },
     hero: {
       kicker: 'Jeddah · Red Sea Port',
@@ -136,7 +136,7 @@ export const dict: Record<Lang, Dict> = {
       venueAddress: 'Al Moulysaa district, Jeddah port area, Red Sea coast, Saudi Arabia.',
       genreLabel: 'Sound',
       bioLabel: 'About the artist',
-      tickets: 'Tickets & info',
+      tickets: 'Buy tickets',
       ticketsSoon: 'Tickets — coming soon',
       mapCta: 'Open in Maps',
       subjectToChange: 'Lineup subject to change.',
@@ -151,7 +151,7 @@ export const dict: Record<Lang, Dict> = {
   },
   ar: {
     dir: 'rtl',
-    nav: { about: 'عن المكان', lineup: 'الفعاليات', visit: 'الزيارة', tickets: 'التذاكر' },
+    nav: { about: 'عن المكان', lineup: 'الفعاليات', visit: 'الزيارة', tickets: 'التذاكر', buyTickets: 'اشترِ التذاكر' },
     langToggle: { label: 'English', switchTo: 'التبديل إلى الإنجليزية' },
     hero: {
       kicker: 'جدة · ميناء البحر الأحمر',
@@ -217,7 +217,7 @@ export const dict: Record<Lang, Dict> = {
       venueAddress: 'حي المُليساء، منطقة ميناء جدة، ساحل البحر الأحمر، المملكة العربية السعودية.',
       genreLabel: 'الأسلوب',
       bioLabel: 'عن الفنان',
-      tickets: 'التذاكر والمعلومات',
+      tickets: 'اشترِ التذاكر',
       ticketsSoon: 'التذاكر — قريبًا',
       mapCta: 'افتح في الخرائط',
       subjectToChange: 'العروض قابلة للتغيير.',

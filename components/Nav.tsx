@@ -64,14 +64,14 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* No verified ticketer yet — route to the Events section where each
-              show links to its own detail page. Never a guessed external link. */}
+          {/* Tickets sold via Webook (TICKETS_URL). Opens in a new tab; falls
+              back to the on-page Events section only if the URL is ever unset. */}
           <a
             href={TICKETS_URL ?? '#lineup'}
             {...(TICKETS_URL ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             className="hidden rounded-full border border-gold/55 px-4 py-2 text-sm font-semibold text-cream transition hover:bg-gold/15 hover:shadow-gold sm:inline-flex"
           >
-            {t.nav.tickets}
+            {TICKETS_URL ? t.nav.buyTickets : t.nav.tickets}
           </a>
           <LangToggle />
           <button
@@ -116,7 +116,7 @@ export function Nav() {
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex justify-center rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light px-5 py-3 text-sm font-bold text-night2"
             >
-              {t.nav.tickets}
+              {TICKETS_URL ? t.nav.buyTickets : t.nav.tickets}
             </a>
           </div>
         </div>
