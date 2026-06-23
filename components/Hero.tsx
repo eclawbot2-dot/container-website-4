@@ -55,15 +55,27 @@ export function Hero() {
           >
             {t.hero.cta}
           </a>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border border-gold/50 px-8 py-3.5 font-semibold text-cream transition hover:border-gold-light hover:bg-gold/10 hover:shadow-gold"
-          >
-            <InstagramIcon />
-            {t.hero.instagram}
-          </a>
+          {INSTAGRAM_URL ? (
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border border-gold/50 px-8 py-3.5 font-semibold text-cream transition hover:border-gold-light hover:bg-gold/10 hover:shadow-gold"
+            >
+              <InstagramIcon />
+              {t.hero.instagram}
+            </a>
+          ) : (
+            // No verified Instagram handle yet — show a non-linking placeholder
+            // rather than guessing a URL that may belong to someone else.
+            <span
+              aria-disabled="true"
+              className="inline-flex min-h-[48px] cursor-not-allowed items-center justify-center gap-2 rounded-full border border-gold/30 px-8 py-3.5 font-semibold text-cream/55"
+            >
+              <InstagramIcon />
+              {t.event.igSoon}
+            </span>
+          )}
         </div>
       </div>
 

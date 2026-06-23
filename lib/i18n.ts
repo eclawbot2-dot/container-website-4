@@ -46,6 +46,23 @@ export type Dict = {
     rights: string;
     eventsNote: string;
   };
+  event: {
+    backToLineup: string;
+    presents: string;
+    dateLabel: string;
+    timeLabel: string;
+    venueLabel: string;
+    venueName: string;
+    venueAddress: string;
+    genreLabel: string;
+    bioLabel: string;
+    tickets: string;
+    ticketsSoon: string;
+    mapCta: string;
+    subjectToChange: string;
+    igSoon: string;
+    contactSoon: string;
+  };
   months: string[];
   weekdays: string[];
 };
@@ -82,7 +99,7 @@ export const dict: Record<Lang, Dict> = {
       subtitle: 'World-class techno and house, on the edge of the Red Sea.',
       ticketsCta: 'Tickets & info',
       tba: 'More to be announced',
-      note: 'Lineup and dates are subject to change. Follow our Instagram for the latest announcements and ticketing.',
+      note: 'Lineup and dates are subject to change. Ticketing and our official channels will be announced soon.',
     },
     visit: {
       eyebrow: 'Plan your night',
@@ -108,6 +125,23 @@ export const dict: Record<Lang, Dict> = {
       contact: 'Contact',
       rights: 'All rights reserved.',
       eventsNote: 'Live electronic music events · Jeddah, Saudi Arabia',
+    },
+    event: {
+      backToLineup: 'Back to all events',
+      presents: 'The Container presents',
+      dateLabel: 'Date',
+      timeLabel: 'Time',
+      venueLabel: 'Venue',
+      venueName: 'The Container · Shams Container Terminal',
+      venueAddress: 'Al Moulysaa district, Jeddah port area, Red Sea coast, Saudi Arabia.',
+      genreLabel: 'Sound',
+      bioLabel: 'About the artist',
+      tickets: 'Tickets & info',
+      ticketsSoon: 'Tickets — coming soon',
+      mapCta: 'Open in Maps',
+      subjectToChange: 'Lineup subject to change.',
+      igSoon: 'Instagram — coming soon',
+      contactSoon: 'Contact details to be announced',
     },
     months: [
       'January', 'February', 'March', 'April', 'May', 'June',
@@ -146,7 +180,7 @@ export const dict: Record<Lang, Dict> = {
       subtitle: 'تكنو وهاوس على أعلى مستوى، على حافة البحر الأحمر.',
       ticketsCta: 'التذاكر والمعلومات',
       tba: 'سيُعلن عن المزيد',
-      note: 'العروض والتواريخ قابلة للتغيير. تابع حسابنا على إنستغرام لآخر الإعلانات والتذاكر.',
+      note: 'العروض والتواريخ قابلة للتغيير. سيُعلن قريبًا عن التذاكر وقنواتنا الرسمية.',
     },
     visit: {
       eyebrow: 'خطّط لليلتك',
@@ -172,6 +206,23 @@ export const dict: Record<Lang, Dict> = {
       contact: 'تواصل',
       rights: 'جميع الحقوق محفوظة.',
       eventsNote: 'فعاليات موسيقى إلكترونية حيّة · جدة، المملكة العربية السعودية',
+    },
+    event: {
+      backToLineup: 'العودة إلى كل الفعاليات',
+      presents: 'ذا كونتينر يقدّم',
+      dateLabel: 'التاريخ',
+      timeLabel: 'الوقت',
+      venueLabel: 'المكان',
+      venueName: 'ذا كونتينر · محطة شمس للحاويات',
+      venueAddress: 'حي المُليساء، منطقة ميناء جدة، ساحل البحر الأحمر، المملكة العربية السعودية.',
+      genreLabel: 'الأسلوب',
+      bioLabel: 'عن الفنان',
+      tickets: 'التذاكر والمعلومات',
+      ticketsSoon: 'التذاكر — قريبًا',
+      mapCta: 'افتح في الخرائط',
+      subjectToChange: 'العروض قابلة للتغيير.',
+      igSoon: 'إنستغرام — قريبًا',
+      contactSoon: 'سيُعلن عن تفاصيل التواصل',
     },
     months: [
       'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',

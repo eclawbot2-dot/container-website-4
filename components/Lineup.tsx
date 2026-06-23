@@ -2,7 +2,7 @@
 
 import { useLang } from './LangProvider';
 import { Flourish } from './Ornament';
-import { EVENTS, INSTAGRAM_URL } from '@/lib/config';
+import { EVENTS } from '@/lib/config';
 import { formatEventDate } from '@/lib/i18n';
 
 const CARD_IMG = ['/images/stage-fire.jpg', '/images/dj-stage.jpg', '/images/fireworks.jpg'];
@@ -77,9 +77,7 @@ export function Lineup() {
                       </span>
                     ) : (
                       <a
-                        href={INSTAGRAM_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={`/events/${ev.id}/`}
                         className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light px-6 py-2.5 font-display text-xs font-bold uppercase tracking-widest text-night2 transition group-hover:shadow-gold"
                       >
                         {t.lineup.ticketsCta}

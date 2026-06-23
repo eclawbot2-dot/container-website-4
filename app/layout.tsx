@@ -6,7 +6,6 @@ import { VENUE_COORDS } from '@/lib/config';
 
 const SITE_URL = 'https://container4.jahdev.com';
 const CANONICAL = `${SITE_URL}/`;
-const INSTAGRAM_URL = 'https://instagram.com/thecontainer.jed';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -99,16 +98,11 @@ const jsonLd = {
       endDate: '2026-08-22T03:00:00+03:00',
       eventStatus: 'https://schema.org/EventScheduled',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      url: `${SITE_URL}/events/anja-schneider/`,
       location: { '@id': `${SITE_URL}/#venue` },
       image: `${SITE_URL}/og-image.jpg`,
       performer: { '@type': 'MusicGroup', name: 'Anja Schneider' },
       organizer: { '@type': 'Organization', name: 'The Container', url: SITE_URL },
-      offers: {
-        '@type': 'Offer',
-        url: INSTAGRAM_URL,
-        availability: 'https://schema.org/InStock',
-        availabilityStarts: '2026-06-23T00:00:00+03:00',
-      },
     },
     {
       '@type': 'Event',
@@ -117,16 +111,11 @@ const jsonLd = {
       endDate: '2026-09-12T03:00:00+03:00',
       eventStatus: 'https://schema.org/EventScheduled',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      url: `${SITE_URL}/events/cassy/`,
       location: { '@id': `${SITE_URL}/#venue` },
       image: `${SITE_URL}/og-image.jpg`,
       performer: { '@type': 'MusicGroup', name: 'Cassy' },
       organizer: { '@type': 'Organization', name: 'The Container', url: SITE_URL },
-      offers: {
-        '@type': 'Offer',
-        url: INSTAGRAM_URL,
-        availability: 'https://schema.org/InStock',
-        availabilityStarts: '2026-06-23T00:00:00+03:00',
-      },
     },
   ],
 };
