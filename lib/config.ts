@@ -5,8 +5,8 @@
 // TODO real IG unknown — set INSTAGRAM_URL to the verified profile when confirmed.
 export const INSTAGRAM_URL: string | null = null;
 
-// Webook Jeddah events — swap to specific event slug when on sale
-export const TICKETS_URL: string | null = 'https://webook.com/explore?city=JED&country=SA';
+// TODO: no ticket URL yet — placeholder until on sale
+export const TICKETS_URL: string | null = null;
 
 // No verified mailbox is provisioned at this address yet; shown as a label.
 // TODO real contact email unknown — confirm a monitored mailbox.

@@ -64,15 +64,25 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Tickets sold via Webook (TICKETS_URL). Opens in a new tab; falls
-              back to the on-page Events section only if the URL is ever unset. */}
-          <a
-            href={TICKETS_URL ?? '#lineup'}
-            {...(TICKETS_URL ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-            className="hidden rounded-full border border-gold/55 px-4 py-2 text-sm font-semibold text-cream transition hover:bg-gold/15 hover:shadow-gold sm:inline-flex"
-          >
-            {TICKETS_URL ? t.nav.buyTickets : t.nav.tickets}
-          </a>
+          {/* No ticket URL yet — show a non-linking "coming soon" placeholder
+              rather than an <a>. Becomes a real link once TICKETS_URL is set. */}
+          {TICKETS_URL ? (
+            <a
+              href={TICKETS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden rounded-full border border-gold/55 px-4 py-2 text-sm font-semibold text-cream transition hover:bg-gold/15 hover:shadow-gold sm:inline-flex"
+            >
+              {t.nav.buyTickets}
+            </a>
+          ) : (
+            <span
+              aria-disabled="true"
+              className="hidden cursor-not-allowed rounded-full border border-gold/35 px-4 py-2 text-sm font-semibold text-cream/55 sm:inline-flex"
+            >
+              {t.event.ticketsSoon}
+            </span>
+          )}
           <LangToggle />
           <button
             type="button"
@@ -110,14 +120,24 @@ export function Nav() {
                 {l.label}
               </a>
             ))}
-            <a
-              href={TICKETS_URL ?? '#lineup'}
-              {...(TICKETS_URL ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              onClick={() => setOpen(false)}
-              className="mt-3 inline-flex justify-center rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light px-5 py-3 text-sm font-bold text-night2"
-            >
-              {TICKETS_URL ? t.nav.buyTickets : t.nav.tickets}
-            </a>
+            {TICKETS_URL ? (
+              <a
+                href={TICKETS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="mt-3 inline-flex justify-center rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light px-5 py-3 text-sm font-bold text-night2"
+              >
+                {t.nav.buyTickets}
+              </a>
+            ) : (
+              <span
+                aria-disabled="true"
+                className="mt-3 inline-flex cursor-not-allowed justify-center rounded-full border border-gold/35 px-5 py-3 text-sm font-bold text-cream/55"
+              >
+                {t.event.ticketsSoon}
+              </span>
+            )}
           </div>
         </div>
       )}
