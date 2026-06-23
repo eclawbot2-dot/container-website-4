@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1920,
         height: 1280,
-        alt: 'The Container — a glowing mainstage on the Jeddah Red Sea waterfront',
+        alt: 'The Container — a glowing festival mainstage rising over the crowd amid the steel structures of the Jeddah container terminal',
       },
     ],
   },

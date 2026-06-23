@@ -20,7 +20,7 @@ export function About() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/golden-crowd.jpg"
-              alt="Towering stacks of shipping containers and gantry cranes at a working waterfront port terminal"
+              alt="A packed crowd dancing before a DJ stage and laser beams inside the raw steel-and-concrete container terminal venue at night"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />
