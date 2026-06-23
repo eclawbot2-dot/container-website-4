@@ -9,12 +9,11 @@ export function LangToggle({ className = '' }: { className?: string }) {
       onClick={toggle}
       aria-label={t.langToggle.switchTo}
       title={t.langToggle.switchTo}
-      className={`group relative inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold tracking-wide text-white/90 backdrop-blur transition hover:border-neon-cyan/70 hover:text-white hover:shadow-[0_0_18px_rgba(15,245,255,0.45)] ${className}`}
+      lang={lang === 'en' ? 'ar' : 'en'}
+      className={`group relative inline-flex min-h-[44px] items-center gap-2 rounded-full border border-gold/40 bg-night/40 px-4 py-2 text-sm font-semibold tracking-wide text-cream/90 backdrop-blur transition hover:border-gold-light hover:text-cream hover:shadow-gold ${className}`}
     >
       <span
-        className={`h-1.5 w-1.5 rounded-full ${
-          lang === 'en' ? 'bg-neon-cyan' : 'bg-neon-magenta'
-        } shadow-[0_0_10px_currentColor]`}
+        className="h-1.5 w-1.5 rounded-full bg-gold-light shadow-[0_0_10px_currentColor] text-gold-light"
         aria-hidden
       />
       {t.langToggle.label}

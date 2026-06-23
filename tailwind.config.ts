@@ -5,52 +5,65 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: '#05010f',
-        ink2: '#0b0420',
-        neon: {
-          magenta: '#ff2ec4',
-          cyan: '#0ff5ff',
-          violet: '#9b5cff',
-          pink: '#ff5cf0',
+        // Tomorrowland-style jewel + gold palette
+        night: '#160a25', // deep royal night
+        night2: '#0e0518', // darkest
+        plum: '#2a1342',
+        royal: '#3a1d56', // royal purple
+        magenta: '#a3246b', // jewel magenta
+        emerald: '#0f6b5c', // jewel emerald/teal
+        teal: '#1b8a8a',
+        ember: '#e2622b', // ember orange
+        gold: {
+          DEFAULT: '#e0a64b',
+          light: '#f7d774',
+          deep: '#b9772a',
         },
+        cream: '#f6ecd8',
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         ar: ['var(--font-ar)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-display)', 'var(--font-sans)', 'sans-serif'],
+        display: ['var(--font-display)', 'Georgia', 'serif'],
+      },
+      boxShadow: {
+        gold: '0 0 28px rgba(224,166,75,0.35)',
+        'gold-lg': '0 10px 50px rgba(224,166,75,0.4)',
+        ember: '0 0 40px rgba(226,98,43,0.45)',
       },
       keyframes: {
-        gradientShift: {
-          '0%,100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
         floatY: {
           '0%,100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
-        pulseGlow: {
-          '0%,100%': { opacity: '0.55' },
-          '50%': { opacity: '1' },
+        emberRise: {
+          '0%': { transform: 'translateY(0) scale(1)', opacity: '0' },
+          '10%': { opacity: '0.9' },
+          '100%': { transform: 'translateY(-90vh) scale(0.4)', opacity: '0' },
         },
-        scan: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(100%)' },
+        glowPulse: {
+          '0%,100%': { opacity: '0.55', filter: 'brightness(1)' },
+          '50%': { opacity: '1', filter: 'brightness(1.25)' },
         },
-        spinSlow: {
-          to: { transform: 'rotate(360deg)' },
+        shimmer: {
+          '0%,100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
         fadeUp: {
-          from: { opacity: '0', transform: 'translateY(24px)' },
+          from: { opacity: '0', transform: 'translateY(26px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        kenburns: {
+          '0%': { transform: 'scale(1.05)' },
+          '100%': { transform: 'scale(1.18)' },
         },
       },
       animation: {
-        gradientShift: 'gradientShift 14s ease infinite',
         floatY: 'floatY 6s ease-in-out infinite',
-        pulseGlow: 'pulseGlow 3s ease-in-out infinite',
-        scan: 'scan 7s linear infinite',
-        spinSlow: 'spinSlow 28s linear infinite',
-        fadeUp: 'fadeUp 0.8s ease both',
+        glowPulse: 'glowPulse 4s ease-in-out infinite',
+        shimmer: 'shimmer 10s ease infinite',
+        fadeUp: 'fadeUp 0.9s ease both',
+        kenburns: 'kenburns 22s ease-out forwards',
       },
     },
   },

@@ -1,0 +1,12 @@
+{
+  "name": "THE CONTAINER · Jeddah",
+  "short_name": "The Container",
+  "description": "Jeddah's Red Sea electronic-music venue at Shams Container Terminal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#160a25",
+  "theme_color": "#160a25",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://container4.jahdev.com/sitemap.xml

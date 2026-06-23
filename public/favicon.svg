@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7d774"/>
+      <stop offset="0.5" stop-color="#e0a64b"/>
+      <stop offset="1" stop-color="#b9772a"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="50%" cy="35%" r="75%">
+      <stop offset="0" stop-color="#3a1d56"/>
+      <stop offset="1" stop-color="#160a25"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- ornate crest C -->
+  <path d="M44 20a16 16 0 1 0 0 24l-5-5a9 9 0 1 1 0-14z" fill="url(#g)"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#g)" stroke-width="1.4" opacity="0.55"/>
+  <path d="M32 7l2.2 3.6L32 9.4l-2.2 1.2z" fill="url(#g)"/>
+  <path d="M32 57l2.2-3.6L32 54.6l-2.2-1.2z" fill="url(#g)"/>
+</svg>
