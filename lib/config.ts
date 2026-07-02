@@ -1,4 +1,8 @@
 // ── Venue config — single place to confirm/swap real values ────────────────
+// Canonical production origin (also asserted independently by
+// scripts/check-site.mjs so a drift here fails CI).
+export const SITE_URL = 'https://container4.jahdev.com';
+
 // No verified Instagram handle exists for this venue. Until one is confirmed,
 // the site shows a non-linking "coming soon" placeholder rather than guessing
 // a handle/URL that may belong to someone else.
@@ -23,6 +27,14 @@ export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${VENUE
 export function mapEmbedUrl(lang: 'en' | 'ar' = 'en') {
   return `https://www.google.com/maps?q=${VENUE_COORDS.lat},${VENUE_COORDS.lng}&z=15&hl=${lang}&output=embed`;
 }
+
+// Per-event hero artwork (also used as each event page's og:image so link
+// unfurls match the page, not the site-wide og-image). All files 1920x1280.
+export const EVENT_IMAGES: Record<string, string> = {
+  'anja-schneider': '/images/stage-fire.jpg',
+  cassy: '/images/dj-stage.jpg',
+};
+export const EVENT_IMAGE_FALLBACK = '/images/night-stage.jpg';
 
 export type EventItem = {
   id: string; // slug, used for /events/[slug]

@@ -3,9 +3,14 @@ import { notFound } from 'next/navigation';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { EventDetail } from '@/components/EventDetail';
-import { EVENT_SLUGS, getEvent, VENUE_COORDS } from '@/lib/config';
-
-const SITE_URL = 'https://container4.jahdev.com';
+import {
+  SITE_URL,
+  EVENT_SLUGS,
+  getEvent,
+  VENUE_COORDS,
+  EVENT_IMAGES,
+  EVENT_IMAGE_FALLBACK,
+} from '@/lib/config';
 
 export function generateStaticParams() {
   return EVENT_SLUGS.map((slug) => ({ slug }));
@@ -26,6 +31,8 @@ export function generateMetadata({
       ).toDateString()}. ${ev.bio.en}`
     : `${ev.artist} live at The Container, Jeddah.`;
   const canonical = `${SITE_URL}/events/${ev.id}/`;
+  // Each event page unfurls with its own hero artwork (all files 1920x1280).
+  const ogImage = EVENT_IMAGES[ev.id] ?? EVENT_IMAGE_FALLBACK;
 
   return {
     title,
@@ -37,13 +44,13 @@ export function generateMetadata({
       siteName: 'The Container',
       title,
       description,
-      images: [{ url: '/og-image.jpg', width: 1920, height: 1280, alt: title }],
+      images: [{ url: ogImage, width: 1920, height: 1280, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/og-image.jpg'],
+      images: [ogImage],
     },
   };
 }
@@ -61,7 +68,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     url: `${SITE_URL}/events/${ev.id}/`,
-    image: `${SITE_URL}/og-image.jpg`,
+    image: `${SITE_URL}${EVENT_IMAGES[ev.id] ?? EVENT_IMAGE_FALLBACK}`,
     performer: { '@type': 'MusicGroup', name: ev.artist },
     organizer: { '@type': 'Organization', name: 'The Container', url: SITE_URL },
     location: {

@@ -2,9 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { LangProvider } from '@/components/LangProvider';
 import { Embers } from '@/components/Embers';
-import { VENUE_COORDS } from '@/lib/config';
+import { SITE_URL, VENUE_COORDS } from '@/lib/config';
 
-const SITE_URL = 'https://container4.jahdev.com';
 const CANONICAL = `${SITE_URL}/`;
 
 export const metadata: Metadata = {

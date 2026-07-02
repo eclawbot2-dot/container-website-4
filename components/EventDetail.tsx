@@ -6,18 +6,15 @@ import {
   type EventItem,
   TICKETS_URL,
   MAPS_URL,
+  EVENT_IMAGES,
+  EVENT_IMAGE_FALLBACK,
 } from '@/lib/config';
 import { formatEventDate } from '@/lib/i18n';
 
-// Per-event hero artwork (festival posters reused from the homepage set)
-const EVENT_IMG: Record<string, string> = {
-  'anja-schneider': '/images/stage-fire.jpg',
-  cassy: '/images/dj-stage.jpg',
-};
-
 export function EventDetail({ ev }: { ev: EventItem }) {
   const { t, lang } = useLang();
-  const img = EVENT_IMG[ev.id] ?? '/images/night-stage.jpg';
+  // Shared per-event artwork map in lib/config — also the page's og:image.
+  const img = EVENT_IMAGES[ev.id] ?? EVENT_IMAGE_FALLBACK;
   const genre = ev.genre?.[lang];
   const bio = ev.bio?.[lang];
 
