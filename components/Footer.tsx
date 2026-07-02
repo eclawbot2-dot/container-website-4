@@ -38,7 +38,7 @@ export function Footer() {
                 </a>
               ) : (
                 // No verified handle yet — labelled placeholder, never a guess.
-                <span className="mt-3 inline-block text-sm text-cream/45">
+                <span className="mt-3 inline-block text-sm text-cream/60">
                   {t.event.igSoon}
                 </span>
               )}
@@ -56,7 +56,7 @@ export function Footer() {
                 </a>
               ) : (
                 // Mailbox not provisioned yet — shown as a plain label, not a mailto.
-                <span className="mt-3 inline-block text-sm text-cream/45">
+                <span className="mt-3 inline-block text-sm text-cream/60">
                   {t.event.contactSoon}
                 </span>
               )}

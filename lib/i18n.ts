@@ -63,6 +63,7 @@ export type Dict = {
     igSoon: string;
     contactSoon: string;
   };
+  notFound: { title: string; body: string; backHome: string; seeLineup: string };
   months: string[];
   weekdays: string[];
 };
@@ -142,6 +143,12 @@ export const dict: Record<Lang, Dict> = {
       subjectToChange: 'Lineup subject to change.',
       igSoon: 'Instagram — coming soon',
       contactSoon: 'Contact details to be announced',
+    },
+    notFound: {
+      title: 'Page not found',
+      body: 'The page you are looking for does not exist or has moved. Head back to the venue — the music is this way.',
+      backHome: 'Back to home',
+      seeLineup: 'See the lineup',
     },
     months: [
       'January', 'February', 'March', 'April', 'May', 'June',
@@ -223,6 +230,12 @@ export const dict: Record<Lang, Dict> = {
       subjectToChange: 'العروض قابلة للتغيير.',
       igSoon: 'إنستغرام — قريبًا',
       contactSoon: 'سيُعلن عن تفاصيل التواصل',
+    },
+    notFound: {
+      title: 'الصفحة غير موجودة',
+      body: 'الصفحة التي تبحث عنها غير موجودة أو تم نقلها. عُد إلى المكان — الموسيقى من هنا.',
+      backHome: 'العودة إلى الرئيسية',
+      seeLineup: 'استعرض الفعاليات',
     },
     months: [
       'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',

@@ -28,10 +28,12 @@ export function Nav() {
     return () => window.removeEventListener('keydown', onKey);
   }, [open]);
 
+  // Root-relative so they work from /events/[slug]/ and the 404 page too —
+  // bare fragments only rewrite the hash on non-home URLs (dead links).
   const links = [
-    { href: '#about', label: t.nav.about },
-    { href: '#lineup', label: t.nav.lineup },
-    { href: '#visit', label: t.nav.visit },
+    { href: '/#about', label: t.nav.about },
+    { href: '/#lineup', label: t.nav.lineup },
+    { href: '/#visit', label: t.nav.visit },
   ];
 
   return (
@@ -44,7 +46,7 @@ export function Nav() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
         <a
-          href="#top"
+          href="/#top"
           className="flex items-center gap-2.5 font-display text-base font-bold tracking-[0.18em] text-cream"
         >
           <Crest className="h-8 w-8 shrink-0" />
